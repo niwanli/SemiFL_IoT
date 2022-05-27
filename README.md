@@ -21,3 +21,36 @@ In this paper, we propose a novel semi-federated learning (SemiFL) concept that 
     note = {under review}
 }
 ```
+
+### Directory Structure
+
+```
+code/
+	├── Fashion_MNIST/
+        ├── dataset pre-processing tools/
+        ├── non_iid_labels.mat
+        ├── non_iid_samples.mat
+        ├── test_data_all.mat
+        ├── test_label_all.mat
+        ├── train_data_all.mat
+        ├── train_label_all.mat
+	├── centralized_learning.m
+	├── federated_learning.m
+	├── semi_federated_learning_ideal.m
+	├── semi_federated_learning.m
+	├── get_selected_CL_devices.m
+	├── get_selected_FL_devices.m
+	├── get_locations.m
+	├── get_channels.m
+	├── get_gradient.m
+	├── get_pruned_model.m
+	├── get_initial_model.mat
+	└── performance_vs_rounds/
+data/
+	├── CL_without_sampling.mat
+	├── FL_with_pruning.mat
+	├── SemiFL_without_sampling_and_pruning.mat
+	├── SemiFL_with_sampling_and_pruning.mat
+	├── draw_accuracy.m
+	└── draw_loss.m	
+```
