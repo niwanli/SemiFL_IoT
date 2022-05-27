@@ -27,13 +27,13 @@ In this paper, we propose a novel semi-federated learning (SemiFL) concept that 
 ```
 code/
 	├── Fashion_MNIST/
-        ├── dataset pre-processing tools/
-        ├── non_iid_labels.mat
-        ├── non_iid_samples.mat
-        ├── test_data_all.mat
-        ├── test_label_all.mat
-        ├── train_data_all.mat
-        ├── train_label_all.mat
+		├── dataset pre-processing tools/
+		├── non_iid_labels.mat
+		├── non_iid_samples.mat
+		├── test_data_all.mat
+		├── test_label_all.mat
+		├── train_data_all.mat
+		├── train_label_all.mat
 	├── centralized_learning.m
 	├── federated_learning.m
 	├── semi_federated_learning_ideal.m
