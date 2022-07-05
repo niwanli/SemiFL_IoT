@@ -25,9 +25,6 @@ In this paper, we propose a novel semi-federated learning (SemiFL) concept that 
 ### 1. Proposed SemiFL Framework
 
 ![SemiFL](img/SemiFL_framework.jpg)
-
-Each round of our proposed SemiFL framework is composed of three main stages at the edge platform, namely, centralized training, federated averaging, and global aggregation.
-
 ![SemiFL Three Stages](img/SemiFL_three_stages.jpg)
 
 ### 2. Experimental Results and Discussions
