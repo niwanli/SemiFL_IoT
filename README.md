@@ -1,23 +1,23 @@
 ## Semi-Federated Learning for Collaborative Intelligence in Massive IoT Networks
 
-**Note:** All code and data are used for the following ACM SIGCOMM 2022 poster paper:
+**Note:** All code and data are used for the following paper:
 > **Title:** Semi-Federated Learning for Collaborative Intelligence in Massive IoT Networks
 >
 > **Author:** Wanli Ni, Jingheng Zheng, and Hui Tian
 >
 > **Institution:**  Beijing University of Posts and Telecommunications
 
-In this paper, we propose a novel semi-federated learning (SemiFL) concept that seamlessly integrates the conventional centralized learning and federated learning into a harmonized framework.
+In this paper, we propose a novel semi-federated learning (SemiFL) concept that seamlessly integrates the conventional centralized learning (CL) and federated learning (FL) into a harmonized framework.
 
 ### Citation
 
 ```
-@inproceedings{Ni2022Semi,
+@article{Ni2022Semi,
     author = {Ni, Wanli and Zheng, Jingheng and Tian, Hui},
     title = {Semi-Federated Learning for Collaborative Intelligence in Massive IoT Networks},
-    booktitle = {SIGCOMM'21 Poster and Demo Sessions (SIGCOMM21 Demos and Posters)},
+    journal = {IEEE Internet of Things Journal},
     year = {2022},
-    month = {August},
+    month = {July},
     note = {under review}
 }
 ```
@@ -25,6 +25,10 @@ In this paper, we propose a novel semi-federated learning (SemiFL) concept that 
 ### 1. Proposed SemiFL Framework
 
 ![SemiFL](img/SemiFL_framework.jpg)
+
+Each round of our proposed SemiFL framework is composed of three main stages at the edge platform, namely, centralized training, federated averaging, and global aggregation.
+
+![SemiFL Three Stages](img/SemiFL_three_stages.jpg)
 
 ### 2. Experimental Results and Discussions
 
@@ -50,7 +54,7 @@ In this paper, we propose a novel semi-federated learning (SemiFL) concept that 
 | `Baseline 2` | Federated learning (FL)       | `federated_learning.m` |
 | `Baseline 3` | SemiFL with $S=0$ and $P=0$ | `semi_federated_learning_ideal.m` |
 
-**3. Simulation Results (The First Group)**
+**3. The First Group of Simulation Results**
 
 ![Figure 1](img/accuracy.jpg)
 
@@ -61,7 +65,7 @@ In this paper, we propose a novel semi-federated learning (SemiFL) concept that 
 - The proposed SemiFL framework without sample selection and network pruning (i.e., Baseline 3) outperforms FL (i.e., Baseline 2), and achieves the similar performance to CL (i.e., Baseline 1) which has higher communication overhead due to the transmission of the entire dataset. 
 - Although sample selection and network pruning can further reduce the communication overhead of SemiFL, they also degrade the achievable learning performance in terms of prediction accuracy and training loss.
 
-**4. Simulation Results (The Second Group)**
+**4. The Second Group of of Simulation Results**
 
 ![Figure 3](img/accuracy_vs_rounds_sampling_and_pruning.jpg)
 
@@ -72,7 +76,7 @@ In this paper, we propose a novel semi-federated learning (SemiFL) concept that 
 - One the one hand, when the sample selection ratio of these computing-limited devices is fixed, increasing the network pruning rate will deteriorate the learning performance in terms of prediction accuracy and training loss. This is because networking pruning degrades the learning ability of these computing-limited devices, but has the benefits of reducing communication overhead and saving local computation time. 
 - On the other hand, when the network pruning rate is fixed, lowering sample selection ratio is beneficial to improve the learning performance under the non-IID data settings. This is different from what we observed in the IID cases considered by our previous papers [4, 6, 10]. Therefore, in the following, we conduct more experiments to show the achievable learning performance under finer settings of sample selection and network pruning.
 
-**5. Simulation Results (The Third Group)**
+**5. The Third Group of Simulation Results**
 
 ![Figure 5](img/accuracy_vs_selection_pruning.jpg)
 
@@ -119,25 +123,3 @@ data/
 ```
 
 > **Note:** The code in this repository is primarily used to generate the simulation results in the first group. The results in the second and third groups can be easily obtained by changing the value settings for sample selection and network pruning.
-
-### 4. References
-
-1. M. M. Amiri, D. Gündüz, S. R. Kulkarni and H. V. Poor, "Convergence of Update Aware Device Scheduling for Federated Learning at the Wireless Edge," in IEEE Transactions on Wireless Communications, vol. 20, no. 6, pp. 3643-3658, June 2021.
-
-2. A. M. Elbir, S. Coleri and K. V. Mishra, "Hybrid Federated and Centralized Learning," 2021 29th European Signal Processing Conference (EUSIPCO), 2021, pp. 1541-1545.
-
-3. A. Li, L. Zhang, J. Tan, Y. Qin, J. Wang and X. -Y. Li, "Sample-level Data Selection for Federated Learning," IEEE INFOCOM 2021 - IEEE Conference on Computer Communications, 2021, pp. 1-10.
-
-4. W. Ni, Y. Liu, H. Tian, Y. C. Eldar, and K. Huang, "SemiFL: Semi-Federated Learning Empowered by Simultaneously Transmitting and Reflecting Reconfigurable Intelligent Surface," ICC 2022 - 2022 IEEE International Conference on Communications (ICC), Seoul, South Korea, 2022, pp. 1-6.
-
-5. W. Ni, Y. Liu, Z. Yang and H. Tian, "Over-the-Air Federated Learning and Non-Orthogonal Multiple Access Unified by Reconfigurable Intelligent Surface," IEEE INFOCOM 2021 - IEEE Conference on Computer Communications Workshops (INFOCOM WKSHPS), 2021, pp. 1-6.
-
-6. W. Ni, Y. Liu, Z. Yang, H. Tian and X. Shen, "Federated Learning in Multi-RIS Aided Systems," in IEEE Internet of Things Journal, doi: 10.1109/JIOT.2021.3130444.
-
-7. J. Ren, W. Ni and H. Tian, "Towards Communication-Learning Trade-off for Federated Learning at the Network Edge," in IEEE Communications Letters, doi: 10.1109/LCOMM.2022.3174295.
-
-8. K. Yang, Y. Shi, Y. Zhou, Z. Yang, L. Fu and W. Chen, "Federated Machine Learning for Intelligent IoT via Reconfigurable Intelligent Surface," in IEEE Network, vol. 34, no. 5, pp. 16-22, September/October 2020.
-
-9. N. Yoshida, T. Nishio, M. Morikura, K. Yamamoto and R. Yonetani, "Hybrid-FL for Wireless Networks: Cooperative Learning Mechanism Using Non-IID Data," ICC 2020 - 2020 IEEE International Conference on Communications (ICC), Dublin, Ireland, 2020, pp. 1-7.
-
-10. J. Zheng, W. Ni, H. Tian, D. Gunduz, and T. Q. S. Quek, "Semi-Federated Learning: An Integrated Framework for Pervasive Intelligence in 6G Networks," IEEE INFOCOM 2022 - IEEE Conference on Computer Communications Workshops (INFOCOM WKSHPS), 2022, pp. 1-6.
