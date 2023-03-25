@@ -16,9 +16,9 @@ In this paper, we propose a novel semi-federated learning (SemiFL) concept that 
     author = {Ni, Wanli and Zheng, Jingheng and Tian, Hui},
     title = {Semi-Federated Learning for Collaborative Intelligence in Massive IoT Networks},
     journal = {IEEE Internet of Things Journal},
-    year = {2022},
-    month = {July},
-    note = {under review}
+    year = {2023},
+    month = {March},
+    note = {accepted}
 }
 ```
 
