@@ -18,7 +18,10 @@ In this paper, we propose a novel semi-federated learning (SemiFL) concept that 
     journal = {IEEE Internet of Things Journal},
     year = {2023},
     month = {March},
-    note = {accepted}
+    volume={10},
+    number={13},
+    pages={11942-11943},
+    doi={10.1109/JIOT.2023.3253853}
 }
 ```
 
